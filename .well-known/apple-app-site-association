@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "86SY5976F6.com.baobeilabs.kitchen",
+        "paths": ["/share/*"]
+      }
+    ]
+  }
+}
