@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaoBei Kitchen — A recipe was shared with you</title>
+
+    <!-- Open Graph (iMessage / Mail / Slack Link Preview) -->
+    <meta property="og:title" content="A recipe shared via BaoBei Kitchen">
+    <meta property="og:description" content="Download BaoBei Kitchen to open this recipe.">
+    <meta property="og:image" content="https://sharondeekwan.github.io/baobei-kitchen-site/dumpling-mascots.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharondeekwan.github.io/baobei-kitchen-site/">
+
+    <!-- Twitter card (some clients fall back to this) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A recipe shared via BaoBei Kitchen">
+    <meta name="twitter:description" content="Download BaoBei Kitchen to open this recipe.">
+    <meta name="twitter:image" content="https://sharondeekwan.github.io/baobei-kitchen-site/dumpling-mascots.svg">
+
+    <!-- Apple Smart App Banner: Sharon to replace APP_ID_TBD with the numeric
+         App Store ID once the app is registered in App Store Connect. -->
+    <meta name="apple-itunes-app" content="app-id=APP_ID_TBD">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            color: #463728;
+            line-height: 1.55;
+            background: linear-gradient(180deg, #E3F4E0 0%, #F5FBF4 60%, #FAFDF9 100%);
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 56px 28px 48px;
+            text-align: center;
+        }
+        .mascots {
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            margin: 0 auto 28px;
+            display: block;
+        }
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: #463728;
+            letter-spacing: -0.01em;
+        }
+        .lede {
+            font-size: 1.05rem;
+            color: #6B5A47;
+            margin-bottom: 32px;
+        }
+        .cta {
+            display: inline-block;
+            background: #463728;
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 14px;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            min-height: 44px;
+            line-height: 1.1;
+        }
+        .cta:focus-visible {
+            outline: 3px solid #6B8E78;
+            outline-offset: 3px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #8A7B68;
+        }
+        @media (max-width: 380px) {
+            .container { padding: 40px 20px; }
+            h1 { font-size: 1.45rem; }
+            .lede { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <img src="dumpling-mascots.svg"
+             alt="Two dumpling mascots: a chef dumpling wearing a hat next to a smaller baby dumpling"
+             class="mascots">
+
+        <h1>A recipe was shared with you!</h1>
+        <p class="lede">
+            Download BaoBei Kitchen to open it. Save recipes, plan meals,
+            and build your kitchen — on your phone.
+        </p>
+
+        <!-- Sharon: replace href with the real App Store URL once the app
+             is live (e.g., https://apps.apple.com/app/id1234567890). -->
+        <a class="cta" href="APP_STORE_URL_TBD" rel="noopener">
+            Download on the App Store
+        </a>
+
+        <p class="footer">
+            BaoBei Kitchen is iOS only.
+        </p>
+    </main>
+</body>
+</html>
