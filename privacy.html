@@ -54,55 +54,65 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="date">Effective date: April 16, 2026</p>
+        <p class="date">Effective date: September 14, 2026</p>
 
         <h2>Overview</h2>
-        <p>BaoBei Kitchen is a personal recipe management app. Your privacy is important to us. This policy explains how the app handles your data.</p>
+        <p>BaoBei Kitchen is a recipe, meal-planning and grocery app made by BaoBei Labs. This policy explains what the app stores, where it is stored, and what happens when you share something.</p>
 
-        <h2>Data Storage</h2>
-        <p>All data you create in BaoBei Kitchen — including recipes, meal plans, grocery lists, photos, and cook logs — is stored <strong>locally on your device</strong> using Apple's SwiftData framework. Your data never leaves your device unless you explicitly choose to share it.</p>
+        <h2>Where your data lives</h2>
+        <p>Everything you create in BaoBei Kitchen &mdash; recipes, meal plans, grocery lists, photos and cook logs &mdash; is stored on your device.</p>
+        <p>If you are signed in to iCloud, the same data also syncs to <strong>your own iCloud account</strong>, so it appears on your other Apple devices. That copy belongs to you. It is held by Apple under Apple&rsquo;s privacy policy, and BaoBei Labs cannot read it.</p>
+        <p>If you are not signed in to iCloud, the app works entirely on your device and nothing syncs.</p>
 
-        <h2>Data We Do NOT Collect</h2>
+        <h2>Sharing a recipe by link</h2>
+        <p>When you tap Share Recipe, the app uploads that one recipe &mdash; and one of its photos, if it has one &mdash; to our storage on Google Firebase, so that the person you send it to can open it. This only happens when you choose to share.</p>
         <ul>
-            <li>We do not collect personal information</li>
-            <li>We do not collect names, email addresses, or contact details</li>
-            <li>We do not use cookies</li>
-            <li>We do not have user accounts or logins</li>
-            <li>We do not collect or store the contents of your recipes, meal plans, or grocery lists on any server</li>
-            <li>We do not use advertising identifiers or serve ads</li>
+            <li>The file is identified by a random code. It is not listed, indexed or searchable.</li>
+            <li>It is <strong>deleted automatically after 30 days</strong>.</li>
+            <li>Anyone who has the link can open it while it lasts, so only send it to people you intend to.</li>
+        </ul>
+        <p>We do not read these files, and nothing else in your library is uploaded.</p>
+
+        <h2>What we do not collect</h2>
+        <ul>
+            <li>We have no user accounts and no logins.</li>
+            <li>We do not collect your name, email address or contact details.</li>
+            <li>We do not read your recipes, meal plans, grocery lists or photos.</li>
+            <li>We do not use cookies, advertising identifiers, or serve ads.</li>
+            <li>We do not sell your data, and we do not share it with data brokers.</li>
+            <li>We do not track you across other apps or websites.</li>
         </ul>
 
         <h2>Permissions</h2>
-        <p>The app may request the following device permissions:</p>
+        <p>The app may ask for the following device permissions:</p>
         <ul>
-            <li><strong>Camera</strong> — to take photos of your recipes. Photos are stored locally on your device only.</li>
-            <li><strong>Photo Library</strong> — to select existing photos for your recipes. Selected photos are copied into the app's local storage.</li>
-            <li><strong>Reminders</strong> — to export your grocery list to the Apple Reminders app. Data is shared only with Apple Reminders on your device.</li>
-            <li><strong>Notifications</strong> — to send you weekly meal planning reminders. Notifications are scheduled locally and do not involve any server.</li>
+            <li><strong>Camera</strong> &mdash; to take photos of your recipes. Photos stay on your device and in your own iCloud, and are included only if you choose to share that recipe.</li>
+            <li><strong>Photo Library</strong> &mdash; to pick existing photos for your recipes. Selected photos are copied into the app&rsquo;s own storage.</li>
+            <li><strong>Reminders</strong> &mdash; to export your grocery list to the Apple Reminders app on your device.</li>
+            <li><strong>Notifications</strong> &mdash; to send meal-planning reminders. These are scheduled on your device and do not involve a server.</li>
         </ul>
 
-        <h2>Analytics &amp; Crash Reporting</h2>
-        <p>BaoBei Kitchen uses <strong>Google Firebase</strong> for crash reporting (Crashlytics) and basic usage analytics. This helps us identify and fix bugs, and understand which features are being used so we can improve the app.</p>
-        <p>Data collected by Firebase includes:</p>
+        <h2>Analytics and crash reporting</h2>
+        <p>BaoBei Kitchen uses <strong>Google Firebase</strong> for crash reporting (Crashlytics) and basic usage analytics. This helps us find and fix bugs, and see which features are used so we can improve the app.</p>
+        <p>Firebase receives:</p>
         <ul>
-            <li><strong>Crash reports</strong> — stack traces, device model, OS version, and app state at the time of a crash. No personal data or recipe content is included.</li>
-            <li><strong>Usage events</strong> — anonymous, aggregated events such as "a recipe was created" or "the grocery list was cleared." We do not track which recipes, what ingredients, or any content you enter.</li>
-            <li><strong>Device information</strong> — device model, operating system version, and app version. Used to prioritize bug fixes for the most common devices.</li>
+            <li><strong>Crash reports</strong> &mdash; stack traces, device model, OS version, and app state at the moment of a crash. No recipe content and no personal data.</li>
+            <li><strong>Usage events</strong> &mdash; anonymous events such as &ldquo;a recipe was created&rdquo; or &ldquo;the grocery list was cleared&rdquo;. We never record which recipe, what ingredients, or anything you typed.</li>
+            <li><strong>Device information</strong> &mdash; device model, operating system version, and app version, so we can prioritise fixes for the most common devices.</li>
         </ul>
-        <p>This data is anonymous and cannot be used to identify you. We do not link analytics data to any personal identity. Firebase data is processed by Google in accordance with <a href="https://firebase.google.com/support/privacy">Google's Firebase privacy policy</a>.</p>
-        <p>No other third-party services, advertising SDKs, or tracking tools are used.</p>
+        <p>This data is not linked to your identity. Firebase data is processed by Google in accordance with <a href="https://firebase.google.com/support/privacy">Google&rsquo;s Firebase privacy policy</a>. No other third-party services, advertising SDKs or tracking tools are used.</p>
 
-        <h2>Data Sharing</h2>
-        <p>Your data is only shared when you explicitly initiate sharing through iOS features such as the Share Sheet or Apple Reminders export. The app never shares data automatically or in the background.</p>
+        <h2>Keeping your data safe</h2>
+        <p>Uploads travel over encrypted connections. Files on our storage are protected by rules limiting their size and type, and by <strong>Firebase App Check</strong>, which confirms that an upload came from a genuine copy of the app rather than a script. Data in iCloud is protected by Apple&rsquo;s encryption and by your Apple Account.</p>
 
-        <h2>Data Deletion</h2>
-        <p>You can delete any recipe, meal plan, grocery item, or cook log at any time within the app. Deleting the app from your device removes all associated data permanently.</p>
+        <h2>Deleting your data</h2>
+        <p>You can delete any recipe, meal plan entry, grocery item or cook log in the app at any time. Deleting the app removes the copy on your device. Data you have synced to your own iCloud is removed by deleting it in the app, or by removing the app&rsquo;s data from your iCloud settings. Shared recipe links expire on their own after 30 days.</p>
 
-        <h2>Children's Privacy</h2>
-        <p>BaoBei Kitchen does not knowingly collect data from children. The app does not collect data from anyone.</p>
+        <h2>Children&rsquo;s privacy</h2>
+        <p>BaoBei Kitchen is not directed at children, and we do not knowingly collect data from them.</p>
 
-        <h2>Changes to This Policy</h2>
-        <p>If this privacy policy changes, the updated policy will be posted on this page with a new effective date.</p>
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes, the updated version is posted on this page with a new effective date.</p>
 
         <h2>Contact</h2>
         <p>If you have questions about this privacy policy, please contact us at <a href="mailto:sharondeekwan@gmail.com">sharondeekwan@gmail.com</a>.</p>
