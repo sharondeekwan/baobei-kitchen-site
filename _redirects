@@ -1,2 +1,13 @@
+# Universal-link paths MUST NOT be redirected. Apple does not follow redirects when
+# fetching the association file, and every share/invite link already in circulation
+# points at this host. These two stay rewrites (200), and /.well-known is untouched.
 /share/* /share-landing 200
 /join/* /join-landing 200
+
+# The app's pages now live on the main domain. 301 so link equity follows and the
+# App Store listing keeps working while its URLs are updated.
+/privacy https://baobeilabs.com/baobei-kitchen/privacy 301
+/privacy.html https://baobeilabs.com/baobei-kitchen/privacy 301
+/support https://baobeilabs.com/baobei-kitchen/support 301
+/support.html https://baobeilabs.com/baobei-kitchen/support 301
+/ https://baobeilabs.com/projects/baobei-kitchen 301
