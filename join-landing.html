@@ -72,6 +72,42 @@
             outline: 3px solid #6B8E78;
             outline-offset: 3px;
         }
+        /* The copied state replaces the button in place: same box, so the
+           page does not reflow under the thumb that just tapped it. */
+        .copied {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 14px;
+            min-height: 44px;
+            line-height: 1.1;
+            background: #E3F0E4;
+            color: #3F6B4A;
+            border: 1px solid #BFD9C4;
+        }
+        .hint {
+            font-size: 0.95rem;
+            color: #6B5A47;
+            margin-top: 14px;
+        }
+        .going {
+            font-size: 0.95rem;
+            color: #8A7B68;
+            margin-top: 10px;
+        }
+        /* iOS-only line pinned to the bottom of the screen rather than
+           floating under the content. */
+        html, body { height: 100%; }
+        body { display: flex; flex-direction: column; }
+        .container { flex: 1 0 auto; }
+        .ios-note {
+            flex-shrink: 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8A7B68;
+            padding: 0 28px 24px;
+        }
         .footer {
             margin-top: 40px;
             font-size: 0.85rem;
@@ -90,19 +126,52 @@
              alt="Two dumpling mascots: a chef dumpling wearing a hat next to a smaller baby dumpling"
              class="mascots">
 
-        <h1>You've been invited to a kitchen</h1>
+        <h1>You've been invited to a shared kitchen!</h1>
         <p class="lede">
-            Get the app, then open this link again to join. A kitchen shares
-            one meal plan, one grocery list, and a shortlist with everyone in it.
+            Tap below to copy your invite and get the app. Then open BaoBei Kitchen and tap <strong>Paste</strong> to join.
         </p>
 
-        <a class="cta" href="https://apps.apple.com/app/id6762439274" rel="noopener">
-            Download on the App Store
+        <a class="cta" id="cta" href="https://apps.apple.com/app/id6762439274"
+           data-store="https://apps.apple.com/app/id6762439274"
+           data-copied="Invite copied" rel="noopener">
+            Copy invite &amp; get the app
         </a>
 
-        <p class="footer">
-            BaoBei Kitchen is iOS only.
-        </p>
+        <p class="hint">Already have the app? Tap the invite link again.</p>
     </main>
+    <p class="ios-note">BaoBei Kitchen is iOS only.</p>
+    <script>
+        // The hand-off: copy the link the person is standing on, then send
+        // them to the App Store. iOS has no deferred deep link, so the
+        // clipboard is what carries the invite across the install — the app
+        // offers a system Paste button on first launch.
+        //
+        // If the clipboard write throws (an old browser, a denied permission,
+        // a non-secure context) we navigate immediately and the "tap the link
+        // again" line above still covers them.
+        (function () {
+            var btn = document.getElementById('cta');
+            var store = btn.getAttribute('data-store');
+            btn.addEventListener('click', function (event) {
+                event.preventDefault();
+                var go = function () { window.location.href = store; };
+                try {
+                    navigator.clipboard.writeText(window.location.href).then(function () {
+                        var copied = document.createElement('span');
+                        copied.className = 'copied';
+                        copied.textContent = '\u2713 ' + btn.getAttribute('data-copied');
+                        btn.replaceWith(copied);
+                        var going = document.createElement('p');
+                        going.className = 'going';
+                        going.textContent = 'Opening the App Store\u2026';
+                        copied.insertAdjacentElement('afterend', going);
+                        setTimeout(go, 900);
+                    }, go);
+                } catch (e) {
+                    go();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
